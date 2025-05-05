@@ -1,0 +1,147 @@
+/* 待办事项模块 */
+.todo-section {
+    width: 100%;
+    max-width: 100%; 
+    margin: 20px 0;
+    padding: 20px;
+    background: var(--card-bg);
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box; /* 确保 padding 不撑开宽度 */
+    max-height: calc(100vh - 200px); /* 视情况调整 */
+    overflow-y: auto;
+  }
+  
+  .todo-section h2 {
+    margin-top: 0;
+    font-size: 20px;
+    color: var(--text-color);
+    margin-bottom: 12px;
+  }
+  
+  .todo-input-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+  
+  #todo-input {
+    flex-grow: 1;
+    padding: 8px 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: var(--card-bg);
+    color: var(--text-color);
+  }
+  
+  #todo-add-btn {
+    padding: 8px 14px;
+    font-size: 16px;
+    background-color: var(--search-btn-bg);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  #todo-add-btn:hover {
+    background-color: var(--search-btn-hover);
+  }
+  
+  #todo-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 300px;
+    overflow-y: auto;
+  }
+  
+  #todo-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 12px;
+    margin-bottom: 8px;
+    background: var(--todo-bg);
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    cursor: pointer;
+  }
+  
+  #todo-list li.completed {
+    text-decoration: line-through;
+    opacity: 0.6;
+  }
+  
+  #todo-list li span {
+    flex-grow: 1;
+    user-select: none;
+  }
+  
+  #todo-list li button.todo-delete {
+    background: none;
+    border: none;
+    color: #c14543;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+  #todo-list::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  #todo-list::-webkit-scrollbar-thumb {
+    background-color: var(--text-color);
+    border-radius: 3px;
+  }
+
+  .view-toggle {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 10px;
+  }
+  
+  .view-toggle button {
+    padding: 4px 12px;
+    border-radius: 6px;
+    background-color: var(--tab-bg);
+    color: var(--text-color);
+    border: none;
+    cursor: pointer;
+  }
+  
+  .view-toggle button.active {
+    background-color: var(--tab-active-bg);
+    color: white;
+  }
+  
+  .todo-archive {
+    margin-top: 16px;
+  }
+
+  .todo-item.overdue {
+    background-color: #ffebee; /* 红色浅背景 */
+    border-left: 4px solid #ef5350;
+  }
+  
+  .todo-item.overdue span {
+    color: #c62828;
+    font-weight: bold;
+  }
+
+  .todo-input-container input[type="datetime-local"] {
+    padding: 8px 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: var(--card-bg);
+    color: var(--text-color);
+  }
+  
+  /* 暗色模式下使用 filter 反色 */
+  .dark-theme .todo-input-container input[type="datetime-local"] {
+    filter: invert(1);
+  }

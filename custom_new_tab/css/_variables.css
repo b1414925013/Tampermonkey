@@ -1,0 +1,29 @@
+/* 基础主题变量 */
+:root {
+    --bg-gradient-start: #f8f9fa;
+    --bg-gradient-end: #e0f7fa;
+    --text-color: #333;
+    --card-bg: #ffffff;
+    --search-btn-bg: #409eff;
+    --search-btn-hover: #66b1ff;
+    --tab-bg: #dcdfe6;
+    --tab-active-bg: #409eff;
+    --time-bg-gradient-start: #7cafe3;
+    --time-bg-gradient-end: #046ac1;
+    --todo-bg: #f5f7fa;
+  }
+  
+  /* 暗色主题变量 */
+  body.dark-mode {
+    --bg-gradient-start: #121212;
+    --bg-gradient-end: #1e1e1e;
+    --text-color: #f5f5f5;
+    --card-bg: #2c2c2c;
+    --search-btn-bg: #1e88e5;
+    --search-btn-hover: #42a5f5;
+    --tab-bg: #424242;
+    --tab-active-bg: #1e88e5;
+    --time-bg-gradient-start: #313131;
+    --time-bg-gradient-end: #1a1a1a;
+    --todo-bg: #3a3a3a;
+  }

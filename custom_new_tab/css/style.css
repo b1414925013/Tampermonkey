@@ -1,0 +1,55 @@
+@import url('_variables.css');
+@import url('_base.css');
+@import url('_time.css');
+@import url('_search.css');
+@import url('_tabs.css');
+@import url('_bookmarks.css');
+@import url('_todo.css');
+
+.settings-section {
+  margin-top: 20px;
+}
+
+.settings-section h4 {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+#export-todos-btn {
+  padding: 8px 12px;
+  background-color: var(--search-btn-bg);
+  color: var(--text-color);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+#export-todos-btn:hover {
+  background-color: var(--search-btn-hover);
+}
+
+#export-bookmarks-btn {
+  padding: 8px 12px;
+  background-color: var(--search-btn-bg);
+  color: var(--text-color);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+#export-bookmarks-btn:hover {
+  background-color: var(--search-btn-hover);
+}
+
+#import-bookmarks-input {
+  display: inline-block;
+  margin-top: 8px;
+}
+
+#settings-btn {
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  border: 1px solid #555;
+}

@@ -1,0 +1,24 @@
+/* 标签页导航 */
+.tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .tabs button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    background-color: var(--tab-bg);
+    color: var(--text-color);
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .tabs button:hover,
+  .tabs button.active {
+    background-color: var(--tab-active-bg);
+    color: white;
+  }

@@ -1,0 +1,59 @@
+/* 顶部栏：时间 + 搜索 */
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.time-box {
+    width: 60%;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right bottom, var(--time-bg-gradient-start), var(--time-bg-gradient-end));
+    color: var(--text-color);
+    font-family: 'Courier New', monospace;
+}
+
+.clock-box {
+    width: 100px;
+    height: 100px;
+}
+
+.time-item {
+    display: flex;
+    align-items: baseline;
+    margin: 0 20px;
+}
+
+.time {
+    font-size: 48px;
+    line-height: 1;
+}
+
+.second {
+    font-size: 24px;
+    margin-left: 10px;
+}
+
+.date-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 40px;
+}
+
+.week {
+    font-size: 20px;
+}
+
+.date {
+    margin-top: 6px;
+    font-size: 16px;
+}

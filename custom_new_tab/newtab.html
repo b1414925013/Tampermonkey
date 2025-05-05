@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>自定义新标签页</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <div class="container">
+    <header class="top-bar">
+      <div class="time-box">
+        <div class="clock-box">
+          <canvas id="analog-clock" width="100" height="100"></canvas>
+        </div>
+        <div class="time-item">
+          <div class="time" id="time-hm">--:--</div>
+          <div class="second" id="time-sec">--</div>
+        </div>
+        <div class="date-item">
+          <div class="week" id="time-week">星期--</div>
+          <div class="date" id="time-date">--年--月--日</div>
+        </div>
+      </div>
+
+      <button id="settings-btn" title="设置">⚙️</button>
+
+      <div class="search-container">
+        <select id="engine-selector">
+          <option value="https://www.baidu.com/s?wd=" selected>百度</option>
+          <option value="https://www.google.com/search?q=">Google</option>
+          <option value="https://www.bing.com/search?q=">Bing</option>
+          <option value="https://duckduckgo.com/?q=">DuckDuckGo</option>
+        </select>
+        <input id="search-input" type="text" placeholder="请输入搜索内容..." />
+        <button id="search-btn">
+          <span class="material-icons">search</span>
+        </button>
+      </div>
+    </header>
+
+    <nav class="tabs">
+      <button data-tab="work">工作</button>
+      <button data-tab="life">生活</button>
+      <button data-tab="tools">工具</button>
+      <button data-tab="other">其他</button>
+    </nav>
+
+    <main class="tab-content" id="tab-content"></main>
+
+    <!-- 待办事项模块 -->
+    <section class="todo-section">
+      <h2>待办事项</h2>
+      <!-- 视图切换按钮 -->
+      <div class="view-toggle">
+        <button id="today-btn" class="active">今日</button>
+        <button id="week-btn">本周</button>
+        <button id="all-btn">全部</button>
+      </div>
+
+      <div class="todo-input-container">
+        <input type="text" id="todo-input" placeholder="输入任务内容..." />
+        <input type="datetime-local" id="todo-due-date" />
+        <button id="todo-add-btn">添加</button>
+      </div>
+
+      <!-- 主列表 -->
+      <ul id="todo-list"></ul>
+
+      <!-- 已完成归档区 -->
+      <div class="todo-archive">
+        <h3>已归档</h3>
+        <ul id="archive-list"></ul>
+      </div>
+    </section>
+  </div>
+
+  <!-- 设置弹窗 -->
+  <div id="settings-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h3>设置</h3>
+
+      <!-- 主题切换 -->
+      <label for="theme-toggle">夜间模式：</label>
+      <button id="theme-toggle" class="toggle-button">🌙</button>
+
+      <!-- 新增：导入/导出 -->
+      <div class="settings-section">
+        <h4>待办数据</h4>
+        <button id="export-todos-btn">导出 todos 数据</button>
+        <input type="file" id="import-todos-input" accept=".json" />
+      </div>
+
+      <!-- 在设置弹窗内新增 -->
+      <div class="settings-section">
+        <h4>书签管理</h4>
+        <button id="export-bookmarks-btn">导出书签数据</button>
+        <input type="file" id="import-bookmarks-input" accept=".json" />
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/tabs.js"></script>
+  <script src="js/todo.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/time.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/bookmarks.js"></script>
+  <script src="js/settings.js"></script>
+</body>
+
+</html>
